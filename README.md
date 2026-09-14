@@ -6,7 +6,7 @@
 
 ### Team Name
 
-fB
+fB (financeBros)
 
 ### Team Members
 
