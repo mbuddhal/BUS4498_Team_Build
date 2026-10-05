@@ -1,13 +1,13 @@
 # Task Summary
 
-*BUS 4498 Team Build Milestone 1. Save this file at `our_team_agent/agent/task-summary.md` in `BUS4498_Team_Build`.*
-
-*Include one row for every workflow task, including human-review and exception-path tasks. Copy task IDs and names exactly from `workflow-of-tasks.md`. Keep only the three columns below. Automation levels and their reasons belong in the team worksheet.*
-
-*For each specification file address, replace both the visible filename and the link target. Use a relative link beginning with `task-specs/`, such as `[task-specs/check-completeness.md](task-specs/check-completeness.md)`. The address is relative to this task-summary file; do not add `our_team_agent/agent/` again.*
-
-*Add rows as needed. Start/end markers and routing-only gateways do not need rows. Remove these instructions and replace every placeholder before submitting. Click every link in GitHub Preview to verify the destination.*
-
 | Task ID | Task name | Specification file address |
 | --- | --- | --- |
-| [Exact task ID] | [Exact verb-object task name] | [task-specs/your-task-name.md](task-specs/your-task-name.md) |
+| T1 | Retrieve Active Watchlist Configuration | [task-specs/retrieve-active-watchlist-configuration.md](task-specs/retrieve-active-watchlist-configuration.md) |
+| T2 | Retrieve Market Data | [task-specs/retrieve-market-data.md](task-specs/retrieve-market-data.md) |
+| T3 | Retrieve Market Context | [task-specs/retrieve-market-context.md](task-specs/retrieve-market-context.md) |
+| T4 | Explain Watchlist Movement | [task-specs/explain-watchlist-movement.md](task-specs/explain-watchlist-movement.md) |
+| T5 | Generate Monitoring Suggestions | [task-specs/generate-monitoring-suggestions.md](task-specs/generate-monitoring-suggestions.md) |
+| T6 | Compose Watchlist Briefing | [task-specs/compose-watchlist-briefing.md](task-specs/compose-watchlist-briefing.md) |
+| T7 | Send Watchlist Email | [task-specs/send-watchlist-email.md](task-specs/send-watchlist-email.md) |
+| T8 | Investigate Missing Market Evidence | [task-specs/investigate-missing-market-evidence.md](task-specs/investigate-missing-market-evidence.md) |
+| T9 | Review Unsupported Insight | [task-specs/review-unsupported-insight.md](task-specs/review-unsupported-insight.md) |
