@@ -4,4 +4,6 @@ window.STOCKBRIEF_CONFIG = {
   mode: 'demo',
   supabaseUrl: 'https://iwrgkcgqdfcbzjzrfmpp.supabase.co',
   supabasePublishableKey: 'sb_publishable_REPLACE_WITH_TEAM_PROJECT_KEY',
+  functionsUrl: 'https://iwrgkcgqdfcbzjzrfmpp.supabase.co/functions/v1/run-stockbrief',
+  model: 'gpt-6-luna',
 };

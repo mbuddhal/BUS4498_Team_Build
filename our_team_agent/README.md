@@ -29,3 +29,15 @@ Then open <http://127.0.0.1:4173/>. If Python is unavailable, use another static
 `config.example.js` documents the safe browser configuration. Copy it to `config.js` only after the team has the shared Supabase publishable key. `config.js` is intentionally not included in the repository yet. Provider keys and AI keys belong in Supabase Secrets, never in this folder.
 
 Live market retrieval, model inference, authenticated persistence, scheduled runs, and email delivery remain separate integration groups.
+
+## OpenAI synthesis integration
+
+The approved model path is OpenAI Responses API with `gpt-6-luna`, selected for focused, high-volume synthesis. The Edge Function uses structured JSON output, a low reasoning setting, and `store: false`; it receives evidence from the workflow controller and never receives the recipient email.
+
+Before connecting the UI, set these Supabase project secrets through the Supabase dashboard or CLI—never in chat or GitHub:
+
+- `OPENAI_API_KEY` — the team’s OpenAI API key.
+- `OPENAI_MODEL` — optional override; default is `gpt-6-luna`.
+- `ALLOWED_ORIGIN` — the deployed Pages origin when the frontend is published.
+
+Apply `supabase/migrations/002_stockbrief.sql`, deploy `supabase/functions/run-stockbrief/`, and test with an authenticated user plus synthetic evidence. The market-data, context-source, and email adapters are not connected yet.
