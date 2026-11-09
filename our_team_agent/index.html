@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="StockBrief watchlist monitoring dashboard" />
+    <title>StockBrief · Watchlist briefings</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="StockBrief home">
+        <span class="brand-mark">SB</span>
+        <span><strong>StockBrief</strong><small>quiet market monitoring</small></span>
+      </a>
+      <div class="topbar-meta">
+        <span class="mode-pill" id="mode-pill">Demo mode</span>
+        <button class="ghost-button" id="pause-button" type="button" aria-pressed="false">Pause runs</button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Your daily market check, under five minutes</p>
+          <h1 id="page-title">A calmer way to follow your watchlist.</h1>
+          <p class="hero-copy">StockBrief collects the evidence you asked it to monitor, explains movement cautiously, and keeps recommendations out of the workflow.</p>
+        </div>
+        <div class="hero-note">
+          <span class="note-icon">i</span>
+          <p><strong>Information, not advice.</strong><br />Every explanation is qualified, time-stamped, and linked to its source.</p>
+        </div>
+      </section>
+
+      <section class="workspace-grid" aria-label="StockBrief workspace">
+        <aside class="control-card card" aria-labelledby="watchlist-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">T1 · configuration</p><h2 id="watchlist-title">Active watchlist</h2></div>
+            <span class="status-dot" title="Configuration ready"></span>
+          </div>
+          <p class="muted">Use symbols only. StockBrief will not change your list during a run.</p>
+          <form id="watchlist-form">
+            <label for="symbols">Symbols</label>
+            <input id="symbols" name="symbols" value="AAPL, MSFT, NVDA" autocomplete="off" spellcheck="false" />
+            <label for="recipient">Briefing recipient</label>
+            <input id="recipient" name="recipient" type="email" value="student@example.edu" autocomplete="email" />
+            <label for="schedule">Schedule</label>
+            <select id="schedule" name="schedule">
+              <option value="open">Market open</option>
+              <option value="close" selected>Market close</option>
+              <option value="manual">Manual only</option>
+            </select>
+            <button class="primary-button" type="submit">Save watchlist</button>
+          </form>
+          <div class="boundary-box">
+            <strong>What this agent will not do</strong>
+            <ul>
+              <li>Buy, sell, or hold securities</li>
+              <li>Invent missing prices or causes</li>
+              <li>Send to an unvalidated recipient</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="briefing-card card" aria-labelledby="briefing-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">Latest run · <span id="run-time">Nov 8, 2026 · 4:40 PM PT</span></p><h2 id="briefing-title">Watchlist briefing</h2></div>
+            <button class="secondary-button" id="run-button" type="button">Run a check</button>
+          </div>
+          <div id="run-status" class="run-status" role="status" aria-live="polite">Ready to review a bounded demo briefing.</div>
+          <div id="briefing-list" class="briefing-list"></div>
+          <div class="review-callout" id="review-callout">
+            <div class="callout-icon">!</div>
+            <div><strong>Human review stays in the loop.</strong><p>This demo contains one unresolved market-cause question. StockBrief holds it instead of guessing.</p></div>
+            <button class="text-button" id="review-button" type="button">Open review packet</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="lower-grid">
+        <article class="card compact-card">
+          <p class="eyebrow">Evidence ledger</p>
+          <h2>What changed this run</h2>
+          <div class="ledger-row"><span>Observation window</span><strong id="window-value">Nov 8, 2026 · 4:35–4:40 PM PT</strong></div>
+          <div class="ledger-row"><span>Sources checked</span><strong id="sources-value">Demo fixtures · 3 symbols</strong></div>
+          <div class="ledger-row"><span>Freshness rule</span><strong>Current or held for review</strong></div>
+        </article>
+        <article class="card compact-card">
+          <p class="eyebrow">Memory and safeguards</p>
+          <h2>Nothing happens twice</h2>
+          <div class="memory-item"><span class="check">✓</span><span>Run IDs prevent duplicate briefings.</span></div>
+          <div class="memory-item"><span class="check">✓</span><span>Reviewer lessons can add caution, never permissions.</span></div>
+          <div class="memory-item"><span class="check">✓</span><span>Pause switch stops retrieval and email.</span></div>
+        </article>
+      </section>
+
+      <footer class="footer-note">StockBrief is a classroom prototype. Live market data, model inference, Supabase persistence, and email delivery are shown as separate integrations until configured.</footer>
+    </main>
+    <dialog id="review-dialog" aria-labelledby="review-dialog-title">
+      <form method="dialog" class="dialog-card">
+        <button class="close-button" value="cancel" aria-label="Close review packet">×</button>
+        <p class="eyebrow">T9 · human review</p>
+        <h2 id="review-dialog-title">Unsupported insight held</h2>
+        <p>One source-backed explanation is not strong enough to state a cause. A reviewer may approve qualified wording or reject it. The reviewer cannot approve a trading direction.</p>
+        <div class="packet"><span>Run</span><strong id="dialog-run-id">SB-DEMO-0001</strong><span>Decision</span><strong>Pending reviewer</strong></div>
+        <button class="primary-button" value="cancel">Close packet</button>
+      </form>
+    </dialog>
+    <script src="./config.js" onerror="window.STOCKBRIEF_CONFIG = { mode: 'demo' }"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
