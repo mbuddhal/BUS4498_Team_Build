@@ -26,9 +26,9 @@ Then open <http://127.0.0.1:4173/>. If Python is unavailable, use another static
 
 ## Configuration boundary
 
-`config.example.js` documents the safe browser configuration. Copy it to `config.js` only after the team has the shared Supabase publishable key. `config.js` is intentionally not included in the repository yet. Provider keys and AI keys belong in Supabase Secrets, never in this folder.
+`config.js` contains only the Supabase URL, publishable key, function URL, and model label. The publishable key is designed for browser use; provider keys and AI keys belong in Supabase Secrets, never in this folder.
 
-Live market retrieval, model inference, authenticated persistence, scheduled runs, and email delivery remain separate integration groups.
+The live UI supports Supabase email/password sign-in, owner-scoped watchlist saving, and authenticated invocation of the synthesis function. Live market retrieval, scheduled runs, and email delivery remain separate integration groups.
 
 ## OpenAI synthesis integration
 

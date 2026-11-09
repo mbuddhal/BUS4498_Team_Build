@@ -34,6 +34,21 @@
 
       <section class="workspace-grid" aria-label="StockBrief workspace">
         <aside class="control-card card" aria-labelledby="watchlist-title">
+          <div class="auth-box" aria-labelledby="auth-title">
+            <div class="section-heading">
+              <div><p class="eyebrow">Access</p><h2 id="auth-title">Moderator sign-in</h2></div>
+              <span class="auth-state" id="auth-state">Signed out</span>
+            </div>
+            <form id="auth-form">
+              <label for="auth-email">Email</label>
+              <input id="auth-email" name="auth-email" type="email" autocomplete="username" required />
+              <label for="auth-password">Password</label>
+              <input id="auth-password" name="auth-password" type="password" autocomplete="current-password" required />
+              <button class="secondary-button auth-submit" type="submit">Sign in</button>
+              <button class="text-button auth-signout" id="signout-button" type="button" hidden>Sign out</button>
+            </form>
+            <p class="auth-message" id="auth-message">Sign in with the Supabase test user before saving or running a live check.</p>
+          </div>
           <div class="section-heading">
             <div><p class="eyebrow">T1 · configuration</p><h2 id="watchlist-title">Active watchlist</h2></div>
             <span class="status-dot" title="Configuration ready"></span>
@@ -106,6 +121,7 @@
         <button class="primary-button" value="cancel">Close packet</button>
       </form>
     </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="./config.js" onerror="window.STOCKBRIEF_CONFIG = { mode: 'demo' }"></script>
     <script src="./app.js" defer></script>
   </body>

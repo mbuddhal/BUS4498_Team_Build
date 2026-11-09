@@ -41,6 +41,11 @@ h2 { margin-bottom: 10px; font-size: 1.35rem; letter-spacing: -.025em; }
 .lower-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
 .card { border: 1px solid var(--line); background: linear-gradient(145deg, rgba(22, 34, 53, .9), rgba(17, 26, 39, .92)); border-radius: 18px; box-shadow: 0 14px 45px rgba(0,0,0,.18); }
 .control-card, .briefing-card { padding: 25px; }
+.auth-box { border-bottom: 1px solid var(--line); margin-bottom: 22px; padding-bottom: 20px; }
+.auth-state { color: var(--muted); font-size: .68rem; }
+.auth-submit { width: auto; margin-top: 16px; padding: 9px 13px; }
+.auth-signout { margin-left: 8px; padding: 8px 10px; }
+.auth-message { color: var(--muted); font-size: .7rem; line-height: 1.45; margin: 12px 0 0; }
 .compact-card { padding: 21px 24px; }
 .section-heading { display: flex; justify-content: space-between; align-items: start; gap: 18px; }
 .section-heading h2 { margin-bottom: 0; }
@@ -64,6 +69,7 @@ input:focus, select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgb
 .briefing-copy { color: #d4dce8; font-size: .8rem; line-height: 1.55; }
 .source-link { color: var(--quiet); font-size: .67rem; margin-top: 6px; }
 .review-callout { display: flex; gap: 12px; align-items: center; margin-top: 20px; padding: 14px; border-radius: 11px; border: 1px solid rgba(241,186,105,.35); background: rgba(241,186,105,.07); }
+.review-callout[hidden] { display: none; }
 .review-callout .callout-icon { border-color: var(--amber); color: var(--amber); }
 .review-callout strong { font-size: .78rem; }
 .review-callout p { color: var(--muted); margin: 5px 0 0; font-size: .72rem; line-height: 1.45; }
