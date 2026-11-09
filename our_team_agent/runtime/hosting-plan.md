@@ -34,3 +34,4 @@ Each user can view and change only their own watchlist and briefing history. Sto
 ## Files people upload
 
 No file uploads planned; users enter structured watchlist symbols and recipient email in the app.
+

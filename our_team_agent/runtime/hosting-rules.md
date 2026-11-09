@@ -67,3 +67,4 @@
 ## Handoff notes
 
 Keep `HANDOFF.md` current after every feature, so either teammate can continue. Use these headings: **What works now** (with the website’s link), **Where things live**, **Secrets** (names only, never values), **How to test**, **What’s next**, and **How we take turns** (pull before you start, push when you stop, tell each other first).
+

@@ -52,3 +52,4 @@ Use the Report a problem control on the affected briefing; the owner reviews the
 - Asking means holding, not guessing: the record waits with a plain reason that names what is missing.
 - A sign-off is a click in the app, recorded with who and when. A chat message is not a sign-off.
 - Test mode never acts: with `dry_run`, the agent decides but saves nothing.
+

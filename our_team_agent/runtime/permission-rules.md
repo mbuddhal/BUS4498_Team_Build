@@ -60,3 +60,4 @@ The plan also names **an owner** (the one person who answers for the agent), **t
 
 - **If the Supabase MCP server is connected:** apply database changes with `apply_migration` and save the same SQL in `supabase/migrations/`. Deploy functions with `deploy_edge_function`. Read the logs when something fails. Never run destructive SQL.
 - **If it isn’t connected:** write the files, then tell us exactly what to paste where: the **SQL Editor** for SQL, and **Edge Functions → submit-event → Code → Deploy** for the agent.
+
